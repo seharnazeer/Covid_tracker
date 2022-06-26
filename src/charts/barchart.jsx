@@ -23,7 +23,7 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-export const Barchart=({year,from})=>{
+export const Barchart=({year,from,specificdata})=>{
   Chart.register(CategoryScale);
   Chart.register(ArcElement);
     const [data,setdata]=useState([]);
@@ -32,7 +32,7 @@ export const Barchart=({year,from})=>{
             setdata(await bardata(year,from));
         }
             getdata();
-    },[year,from])
+    },[year,from,specificdata])
     const {totalcases,countryname}=data;
     console.log(countryname);
     let dates=[];

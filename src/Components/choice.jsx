@@ -95,7 +95,7 @@ export const Choice=({settype,rearrange})=>{
          display.includes("Pie Chart")?<Piechart  specificdata={specificdata} />:null
      }
      {
-        display==="Line Chart"&&year!==""&&from!==""?<Barchart year={year} from={from} />:null
+        display==="Line Chart"&&year!==""&&from!==""?<Barchart year={year} from={from} specificdata={specificdata}/>:null
      }
      
      </>
